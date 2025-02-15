@@ -1,0 +1,74 @@
+﻿@model List<WebApplication2.Models.Task>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyWords" content="todo list,tasks list, time table, list, organizing">
+    <meta name="description" content="Stay organized and boost your productivity with our intuitive to-do list app. Easily manage tasks, set priorities, and achieve your goals with a user-friendly interface. Perfect for personal and professional use.">
+    <meta name="author" content="mahmoud hany">
+    <link rel="stylesheet" href="~/css/style.css">
+    <link rel="icon" href="~/images/icon/list.svg">
+    <title>@ViewData["Title"] - To Do List</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <h1>ToDO</h1>
+                    <div class="text-img">
+                        <div class="icon-container">
+                            <img src="~/images/icon/checklist_17288166.svg" alt="TODOList icon">
+                        </div>
+                        <h1 id="end">List</h1>
+                    </div>
+                </div>
+            </div>
+            <button id="side-bar-button">
+                <img src="~/images/icon/calendar.svg" alt="side-bar icon">
+            </button>
+        </div>
+    </header>
+        <main>
+            <div class="main-content">
+                <div class="head">
+                    <h1>Welcome to Mahmoud's <br> To-Do List</h1>
+                    <p>Stay organized and boost your productivity with intuitive to-do list app. Manage tasks effortlessly and achieve your goals</p>
+                </div>
+                <div class="todo-container">
+                    <div class="input-div">
+                    <form asp-action="AddTask" asp-controller="Home" method="post">
+                        <input type="hidden" name="id" id="taskId" value="0" />
+                        <input type="text" id="title" name="title" required placeholder="Enter task" />
+                        <button type="submit" id="addbtn">
+                            <div class="button-img">
+                                <img src="~/images/icon/majesticons--plus.svg" alt="plus icon">
+                            </div>
+                            Add New Task
+                        </button>
+                    </form>
+                    </div>
+                    <div class="tasks">
+                        @{
+                            foreach (var task in Model)
+                            {
+                                <div class="task" data-id="@task.Id">
+                                    @task.Value
+                                    <div class="btn-div">
+                                    <button class="editbtn" onclick="edit(event,@task.Id)" style="width: 55%;font-size: 0.9rem;padding: 0.3rem;">
+                                        Edit
+                                    </button>
+                                    <a class="delbtn" style="text-decoration:none;user-select:none;text-align:center;width: 55%;padding: 0.3rem;border: none;border-radius: 20px;background-color: #20c997;color: white;font-size: 0.9rem;cursor: pointer;" asp-controller="Home" asp-action="Delete" asp-route-id="@task.Id">Delete</a>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    <script src="~/js/main.js"></script>
+</body>
+</html>

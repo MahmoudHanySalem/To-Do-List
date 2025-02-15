@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="font\SpaceGrotesk-VariableFont_wght.ttf" />
+    <Content Include="images\icon\16012498.svg" />
+    <Content Include="images\icon\16381601.svg" />
+    <Content Include="images\icon\add-button_8345011.svg" />
+    <Content Include="images\icon\calendar.svg" />
+    <Content Include="images\icon\checklist_17288166.svg" />
+    <Content Include="images\icon\ic--baseline-edit.svg" />
+    <Content Include="images\icon\icons8-sidebar-48.svg" />
+    <Content Include="images\icon\icons8-sidebar-96.svg" />
+    <Content Include="images\icon\list.svg" />
+    <Content Include="images\icon\list_8275465.svg" />
+    <Content Include="images\icon\majesticons--plus.svg" />
+    <Content Include="images\icon\pen.svg" />
+    <Content Include="images\icon\pencil.svg" />
+    <Content Include="images\icon\png\16012498.png" />
+    <Content Include="images\icon\png\16381601.png" />
+    <Content Include="images\icon\png\16596916.png" />
+    <Content Include="images\icon\png\add-button_8345011.png" />
+    <Content Include="images\icon\png\calendar.png" />
+    <Content Include="images\icon\png\checklist_17288166.png" />
+    <Content Include="images\icon\png\ic--baseline-edit.png" />
+    <Content Include="images\icon\png\icons8-sidebar-48.png" />
+    <Content Include="images\icon\png\icons8-sidebar-96.png" />
+    <Content Include="images\icon\png\list.png" />
+    <Content Include="images\icon\png\list_8275465.png" />
+    <Content Include="images\icon\png\pen.png" />
+    <Content Include="images\icon\png\pencil.png" />
+    <Content Include="images\icon\png\sidebar.png" />
+    <Content Include="images\icon\sidebar.svg" />
+    <Content Include="images\icon\work-order.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.2" />
+  </ItemGroup>
+
+</Project>

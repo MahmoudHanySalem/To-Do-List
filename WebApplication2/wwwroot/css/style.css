@@ -1,0 +1,263 @@
+﻿@font-face {
+    font-family: SpaceGrotesk;
+    src: url('../font/SpaceGrotesk-VariableFont_wght.ttf');
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: SpaceGrotesk, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: fit-content;
+}
+
+.header-content {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #085a6e; /*#033541*/
+}
+
+.logo-container {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 0.1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 6rem;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+}
+
+.text-img {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo h1 {
+    width: fit-content;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    letter-spacing: 0.15rem;
+}
+
+#end {
+    position: relative;
+    top: -0.8rem;
+}
+
+.icon-container {
+    width: 2rem;
+    height: 2rem;
+}
+
+    .icon-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+#side-bar-button {
+    width: 2rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.active {
+    border: 1px solid rgb(28, 61, 128);
+    background-color: white;
+}
+
+#side-bar-button img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.head {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+    .head h1 {
+        width: 100%;
+        font-size: 5rem;
+        font-weight: 900;
+        line-height: 5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .head p {
+        width: 85%;
+        font-size: 1.7rem;
+        letter-spacing: 0.1rem;
+    }
+
+.todo-container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.input-div,form {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+    .input-div input {
+        width: 50%;
+        height: 3rem;
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        background-color: #085a6e;
+        color: white;
+        font-size: 1.2rem;
+        padding-left: 0.7rem;
+    }
+
+input::placeholder {
+    color: white;
+}
+
+input::selection {
+    color: white;
+    background: black;
+}
+
+.input-div button {
+    border: none;
+    border-radius: 20px;
+    width: 17%;
+    height: 3rem;
+    background-color: #085a6e;
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.button-img {
+    width: 12%;
+    height: 45%;
+}
+
+    .button-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+.tasks {
+    width: 90%;
+    height: fit-content;
+    background-color: #b2d8d8;
+    border-radius: 20px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task {
+    width: 90%;
+    height: 2.5rem;
+    background-color: #085a6e;
+    color: white;
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.divInput {
+    width: 80%;
+    height: 2.5rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1rem;
+    padding-left: 0.2rem;
+    border: none;
+    outline: none;
+}
+
+.btn-div {
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem;
+}
+
+    .btn-div button {
+        text-decoration: none;
+        width: 55%;
+        padding: 0.3rem;
+        border: none;
+        border-radius: 20px;
+        background-color: #20c997;
+        color: white;
+        font-size: 0.7rem;
+        cursor: pointer;
+    }
+
+.cancel-button {
+    background-color: red !important;
+}
