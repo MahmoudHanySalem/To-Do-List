@@ -14,6 +14,7 @@ function edit() {
         if (current.innerHTML == "Edit") {
             const idField = document.querySelector(".input-div form #taskId");
             idField.value = current.parentElement.parentElement.getAttribute("data-id");
+            input.value = Array.from(current.parentElement.parentElement.childNodes).filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent.trim()).join('');
             input.focus();
             addbtn.innerHTML = `<div class="button-img">
                 <img src="images/icon/ic--baseline-edit.svg" alt="editing icon">
