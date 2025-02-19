@@ -246,8 +246,9 @@ input::selection {
     padding: 0.4rem;
 }
 
-    .btn-div button {
+    .btn-div * {
         text-decoration: none;
+        text-align: center;
         width: 55%;
         padding: 0.3rem;
         border: none;

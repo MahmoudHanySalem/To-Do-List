@@ -1,6 +1,13 @@
 const input = document.querySelector(".input-div form #title");
 const addbtn = document.getElementById("addbtn");
 const tasksDiv = document.querySelector(".tasks");
+
+document.addEventListener("DOMContentLoaded", function () {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+    });
+});
+
 function edit() {
     if (event.target.classList.contains('editbtn') || event.target.classList.contains('cancel-button')) {
         const current = event.target;
@@ -53,9 +60,6 @@ addbtn.addEventListener('click', (event) => {
         tasksDiv.appendChild(element);
 
         input.value = '';
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: 'smooth'
-        });
+
     } 
 });

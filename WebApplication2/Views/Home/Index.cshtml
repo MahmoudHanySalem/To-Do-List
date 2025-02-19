@@ -9,7 +9,7 @@
     <meta name="author" content="mahmoud hany">
     <link rel="stylesheet" href="~/css/style.css">
     <link rel="icon" href="~/images/icon/list.svg">
-    <title>@ViewData["Title"] - To Do List</title>
+    <title>@ViewData["Title"] To-Do List</title>
 </head>
 <body>
     <header class="header">
@@ -56,10 +56,8 @@
                                 <div class="task" data-id="@task.Id">
                                     @task.Value
                                     <div class="btn-div">
-                                    <button class="editbtn" onclick="edit(event,@task.Id)" style="width: 55%;font-size: 0.9rem;padding: 0.3rem;">
-                                        Edit
-                                    </button>
-                                    <a class="delbtn" style="text-decoration:none;user-select:none;text-align:center;width: 55%;padding: 0.3rem;border: none;border-radius: 20px;background-color: #20c997;color: white;font-size: 0.9rem;cursor: pointer;" asp-controller="Home" asp-action="Delete" asp-route-id="@task.Id">Delete</a>
+                                    <button class="editbtn" onclick="edit()">Edit</button>
+                                    <a class="delbtn" asp-controller="Home" asp-action="Delete" asp-route-id="@task.Id">Delete</a>
                                     </div>
                                 </div>
                             }
