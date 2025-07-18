@@ -21,7 +21,7 @@ Visual Studio
 Entity Framework Core
 
 
-3. Frontend Description
+3. Frontend Description:
 
 HTML (Index.cshtml)
 
